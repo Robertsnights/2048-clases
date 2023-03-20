@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "description": "es para una clase",
+  "dir": "ltr",
+  "display": "minimal-ui",
+  "name": "robertsnights.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "robertsnights.github",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "favicon.ico"
+    },
+    {
+      "src": "meta/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    }
+  ],
+  "shortcuts": []
+}
