@@ -1,19 +1,19 @@
 {
   "background_color": "#ffffff",
-  "description": "es para una clase",
+  "description": "clase",
   "dir": "ltr",
   "display": "minimal-ui",
-  "name": "robertsnights.github",
+  "name": "2048 clases",
   "orientation": "any",
   "scope": "/",
-  "short_name": "robertsnights.github",
-  "start_url": "/",
+  "short_name": "2048",
+  "start_url": "https://robertsnights.github.io/2048-clases/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
   "icons": [
     {
-      "src": "favicon.ico"
+      "src": "cel_Icon.png"
     },
     {
       "src": "meta/apple-touch-icon.png",
