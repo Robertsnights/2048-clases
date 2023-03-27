@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\js",
+    "\\style"
   ],
-  "SelectedNode": "\\manifest.json",
+  "SelectedNode": "\\manifest.webmanifest",
   "PreviewInSolutionExplorer": false
 }

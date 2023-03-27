@@ -7,7 +7,7 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "robertsnights.github",
-  "start_url": "/",
+  "start_url": "https://robertsnights.github.io/2048-clases/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
@@ -16,9 +16,9 @@
       "src": "favicon.ico"
     },
     {
-      "src": "meta/apple-touch-icon.png",
+      "src": "cel Icon.png",
       "type": "image/png",
-      "sizes": "152x152"
+      "sizes": "512x512"
     }
   ],
   "shortcuts": []
