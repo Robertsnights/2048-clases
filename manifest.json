@@ -1,27 +1,24 @@
 {
   "background_color": "#ffffff",
-  "description": "hola",
+  "description": "ya basta de esto",
   "dir": "ltr",
   "display": "minimal-ui",
   "name": "robertsnights.github",
   "orientation": "any",
   "scope": "/",
-  "short_name": "robertsnights.github",
+  "short_name": "2048",
   "start_url": "/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
   "icons": [
     {
-      "src": "Cel Icon.png",
-      "src2":  "favicon.ico"
+      "src": "favicon.ico"
     },
     {
       "src": "meta/apple-touch-icon.png",
       "type": "image/png",
-      "sizes": "512x512"
-
-      
+      "sizes": "152x152"
     }
   ],
   "shortcuts": []
