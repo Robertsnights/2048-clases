@@ -13,12 +13,12 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "favicon.ico"
+      "src": "cel_Icon.png"
     },
     {
       "src": "meta/apple-touch-icon.png",
       "type": "image/png",
-      "sizes": "152x152"
+      "sizes": "512x512"
     }
   ],
   "shortcuts": []
