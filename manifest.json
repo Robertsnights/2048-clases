@@ -1,13 +1,13 @@
 {
   "background_color": "#ffffff",
-  "description": "juego hecho para la carrera de videojuegos",
+  "description": "hola",
   "dir": "ltr",
   "display": "minimal-ui",
   "name": "robertsnights.github",
   "orientation": "any",
   "scope": "/",
   "short_name": "robertsnights.github",
-  "start_url": "https://robertsnights.github.io/2048-clases/",
+  "start_url": "/",
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
@@ -16,9 +16,9 @@
       "src": "favicon.ico"
     },
     {
-      "src": "cel Icon.png",
+      "src": "meta/apple-touch-icon.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "152x152"
     }
   ],
   "shortcuts": []
