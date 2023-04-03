@@ -11,6 +11,7 @@
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
+  "add start_url": "https://robertsnights.github.io/2048-clases/",
   "icons": [
     {
       "src": "cel_Icon.png"
