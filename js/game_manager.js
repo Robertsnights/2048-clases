@@ -1,9 +1,4 @@
-var nombre;
 
-function playButtonClicked() {
-  nombre = prompt('INGRESA UN NOMBRE: ');
-  document.getElementById("descarga").disabled = true;
-}
 
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
@@ -25,7 +20,7 @@ GameManager.prototype.restart = function () {
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
-  this.playButtonClicked();
+  
 };
 
 // Keep playing after winning (allows going over 2048)

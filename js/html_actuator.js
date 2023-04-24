@@ -1,4 +1,9 @@
+var nombre;
 
+function playButtonClicked() {
+  nombre = prompt('INGRESA UN NOMBRE: ');
+  document.getElementById("descarga").disabled = true;
+}
 
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
@@ -141,6 +146,7 @@ HTMLActuator.prototype.clearMessage = function () {
   // IE only takes one value to remove at a time.
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
+  playButtonClicked();
 };
 
 const Socket = new WebSocket(
