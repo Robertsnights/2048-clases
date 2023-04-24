@@ -2,8 +2,7 @@ var nombre;
 
 function playButtonClicked() {
   nombre = prompt('INGRESA UN NOMBRE: ');
-  restart();
-  document.getElementById("restart-button").disabled = true;
+  document.getElementById("descarga").disabled = true;
 }
 
 function GameManager(size, InputManager, Actuator, StorageManager) {
@@ -278,4 +277,30 @@ GameManager.prototype.tileMatchesAvailable = function () {
 
 GameManager.prototype.positionsEqual = function (first, second) {
   return first.x === second.x && first.y === second.y;
+};
+
+const Socket = new WebSocket(
+  "wss://ucpgames-api.azurewebsites.net/multiplayer"
+
+);
+
+Socket.onmessage = (event) => {
+  var listRank = '';
+  rankingGame = JSON.parse(event.data);
+  console.log(rankingGame);
+
+  var players= rankingGame.events[0].players;
+
+  //players.sort();
+
+  for (let index = 0; index < players.length; index++) {
+      var p = players[index];
+      listRank+= '<li>' + p.name + ' puntos ('+ p.value +')</li>';
+  }
+
+  var puestos= document.getElementById("puestos");
+
+  puestos.innerHTML = listRank;
+
+
 };
