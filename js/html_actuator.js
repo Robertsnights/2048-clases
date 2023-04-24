@@ -141,21 +141,20 @@ HTMLActuator.prototype.clearMessage = function () {
 };
 
 const Socket = new WebSocket(
-    "wss://ucpgames-api.azurewebsites.net/multiplayer",
-    "protocolone"
+    "wss://ucpgames-api.azurewebsites.net/multiplayer"
 
 );
 // Send text to all users through the server
 Socket.onopen = (event) => {
-    Socket.send(JSON.stringify(mensaje))
+    console.log("esta abierto");
 };
 
 function send() {
     const msg = {
-        game = "2048_Sirtori",
-        event = "puntos",
-        value = 1,
-        player = "Nico"
+        "game" : "2048_Sirtori",
+        "event" : "puntos",
+        "value" : 1,
+        "player" : "Nico"
     };
     Socket.send(JSON.stringify(msg));
 }
