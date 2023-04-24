@@ -3,7 +3,7 @@ var name;
 function playButtonClicked() {
   name = prompt('INGRESA UN NOMBRE: ');
   newGame();
-  document.getElementById("playbutton").disabled = true;
+  document.getElementById("restart-button").disabled = true;
 }
 
 function HTMLActuator() {
