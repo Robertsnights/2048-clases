@@ -1,7 +1,7 @@
-var name;
+var nombre;
 
 function playButtonClicked() {
-  name = prompt('INGRESA UN NOMBRE: ');
+  nombre = prompt('INGRESA UN NOMBRE: ');
   newGame();
   document.getElementById("restart-button").disabled = true;
 }
@@ -163,7 +163,7 @@ function send() {
       "game" : "2048",
       "event" : "puntos",
       "value" : 1,
-      "player" : name
+      "player" : nombre,
   };
   Socket.send(JSON.stringify(msg));
 }
