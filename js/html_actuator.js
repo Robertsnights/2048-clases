@@ -1,10 +1,4 @@
-var nombre;
 
-function playButtonClicked() {
-  nombre = prompt('INGRESA UN NOMBRE: ');
-  newGame();
-  document.getElementById("restart-button").disabled = true;
-}
 
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
@@ -128,7 +122,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   }
 
     send();
-    recibir();
+
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {

@@ -1,3 +1,11 @@
+var nombre;
+
+function playButtonClicked() {
+  nombre = prompt('INGRESA UN NOMBRE: ');
+  restart();
+  document.getElementById("restart-button").disabled = true;
+}
+
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
