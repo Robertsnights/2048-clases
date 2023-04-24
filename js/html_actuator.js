@@ -118,6 +118,8 @@ HTMLActuator.prototype.updateScore = function (score) {
 
     this.scoreContainer.appendChild(addition);
   }
+
+    send();
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
@@ -138,4 +140,23 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-over");
 };
 
-envio = bestScore;
+const Socket = new WebSocket(
+    "wss://ucpgames-api.azurewebsites.net/multiplayer",
+    "protocolone"
+
+);
+// Send text to all users through the server
+Socket.onopen = (event) => {
+    Socket.send(JSON.stringify(mensaje))
+};
+
+function send() {
+    const msg = {
+        game = "2048_Sirtori",
+        event = "puntos",
+        value = 1,
+        player = "Nico"
+    };
+    Socket.send(JSON.stringify(msg));
+}
+
