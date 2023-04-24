@@ -120,6 +120,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   }
 
     send();
+    recibir();
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
@@ -150,12 +151,24 @@ Socket.onopen = (event) => {
 };
 
 function send() {
-    const msg = {
-        "game" : "2048",
-        "event" : "puntos",
-        "value" : 1,
-        "player" : "Nico"
-    };
-    Socket.send(JSON.stringify(msg));
+  const msg = {
+      "game" : "2048",
+      "event" : "puntos",
+      "value" : 1,
+      "player" : "Nico"
+  };
+  Socket.send(JSON.stringify(msg));
 }
+
+
+function recibir(){
+  msg2 = JSON.parse();
+  arr = msg2.JSON.parse.events.players;
+  arr.sort();
+
+  document.getElementById("cuatro") = arr[1];
+  document.getElementById("tres") = arr[2];
+  document.getElementById("dos") = arr[3];
+  document.getElementById("uno")= arr[4];
+};
 
