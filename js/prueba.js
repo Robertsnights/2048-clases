@@ -32,3 +32,18 @@ if (window.self !== window.top) {
 }
 
 
+const Socket = new WebSocket(
+    "wss://ucpgames-api.azurewebsites.net/multiplayer",
+    "protocolone"
+
+);
+// Send text to all users through the server
+Socket.onopen = (event) => {
+    Socket.send(JSON.stringify(mensaje))
+};
+
+const mensaje = {
+    event = "puntaje",
+    text: document.getElementById(envio).nodeValue,
+
+};

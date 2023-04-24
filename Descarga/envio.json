@@ -1,34 +1,34 @@
-
 {
-    "game": "2048_Sirtori",
-    "events": [
-      {
-        "eventName": "puntos",
-        "value": 0,
-        "players": [
-          {
-            "name": "",
-            "value": 0
-          },
-          {
-            "name": "",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "eventName": "movimientos",
-        "value": 0,
-        "players": [
-          {
-            "name": "",
-            "value": 0
-          },
-          {
-            "name": "",
-            "value": 0
-          }
-        ]
-      }
-    ]
-}
+  "game": "2048_Sirtori",
+  "events": [
+    {
+      "eventName": "puntos",
+      "value": 0,
+      "players": [
+        {
+          "name": "",
+          "value": 0
+        },
+        {
+          "name": "",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "eventName": "movimientos",
+      "value": 0,
+      "players": [
+        {
+          "name": "",
+          "value": 0
+        },
+        {
+          "name": "",
+          "value": 0
+        }
+      ]
+    }
+  ]
+
+} 
