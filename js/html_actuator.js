@@ -151,7 +151,7 @@ Socket.onopen = (event) => {
 
 function send() {
     const msg = {
-        "game" : "2048_Sirtori",
+        "game" : "2048",
         "event" : "puntos",
         "value" : 1,
         "player" : "Nico"
