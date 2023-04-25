@@ -159,3 +159,49 @@ function send() {
     Socket.send(JSON.stringify(msg));
 }
 
+const elSocket = new WebSocket(
+  "wss://ucpgames-api.azurewebsites.net/multiplayer"
+
+);
+var nombre;
+
+function playButtonClicked() {
+  nombre = prompt('INGRESA UN NOMBRE: ');
+  newgame();
+}
+// Send text to all users through the server
+elSocket.onopen = (event) => {
+  console.log("esta abierto");
+};
+
+function send() {
+  const msg = {
+    "game" : "2048",
+    "event" : "puntos",
+    "value" : 1,
+
+    "player" : nombre,
+
+  };
+  elSocket.send(JSON.stringify(msg));
+}
+
+
+elSocket.onmessage = (event) => {
+  var listRank = '';
+  rankingGame = JSON.parse(event.data);
+  console.log(rankingGame);
+
+  var players= rankingGame.events[0].players;
+
+  //players.sort();
+
+  for (let index = 0; index < players.length; index++) {
+      var p = players[index];
+      listRank+= '<li>' + p.name + ' puntos ('+ p.value +')</li>';
+  }
+
+  var puestos= document.getElementById("puestos");
+
+  puestos.innerHTML = listRank;
+}
