@@ -1,4 +1,3 @@
-
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
@@ -121,7 +120,6 @@ HTMLActuator.prototype.updateScore = function (score) {
   }
 
     send();
-
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
@@ -161,3 +159,4 @@ function send() {
     };
     Socket.send(JSON.stringify(msg));
 }
+
