@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-var nombre;
 
-function playButtonClicked() {
-  nombre = prompt('INGRESA UN NOMBRE: ');
-  document.getElementById("descarga").disabled = true;
-}
-
-=======
->>>>>>> parent of 8b7a718 (prueba)
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
@@ -149,41 +140,24 @@ HTMLActuator.prototype.clearMessage = function () {
   // IE only takes one value to remove at a time.
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
-  playButtonClicked();
 };
 
 const Socket = new WebSocket(
-    "wss://ucpgames-api.azurewebsites.net/multiplayer"
+    "wss://ucpgames-api.azurewebsites.net/multiplayer",
+    "protocolone"
 
 );
 // Send text to all users through the server
 Socket.onopen = (event) => {
-    console.log("esta abierto");
+    Socket.send(JSON.stringify(mensaje))
 };
 
 function send() {
-  const msg = {
-      "game" : "2048",
-      "event" : "puntos",
-      "value" : 1,
-<<<<<<< HEAD
-      "player" : nombre,
-=======
-      "player" : "Nico"
->>>>>>> parent of 8b7a718 (prueba)
-  };
-  Socket.send(JSON.stringify(msg));
+    const msg = {
+        game : "2048_Sirtori",
+        event: "puntos",
+        value : 1,
+        player : "Nico"
+    };
+    Socket.send(JSON.stringify(msg));
 }
-
-
-function recibir(){
-  msg2 = JSON.parse();
-  arr = msg2.JSON.parse.events.players;
-  arr.sort();
-
-  document.getElementById("cuatro") = arr[1];
-  document.getElementById("tres") = arr[2];
-  document.getElementById("dos") = arr[3];
-  document.getElementById("uno")= arr[4];
-};
-
