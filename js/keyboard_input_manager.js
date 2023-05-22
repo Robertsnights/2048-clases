@@ -125,6 +125,33 @@ KeyboardInputManager.prototype.listen = function () {
       self.emit("move", absDx > absDy ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0));
     }
   });
+  window.addEventListener("deviceorientation", function(event){
+    beta=Math.round(event.beta);
+    gama=Math.round(event.gamma);
+    var x  = 0;
+    var y=0;
+    var newX = gama;
+    var newY = beta;
+
+    if(newX < x){
+        self.emit("move", 1);
+        x = newX;
+    }
+    else(newX>x)
+    {
+        self.emit("move",3);
+        x=newX;
+    };
+    if(newY < y){
+        self.emit("move", 2);
+        y = newY;
+    }
+    else(newY>y)
+    {
+        self.emit("move",0);
+        y=newY;
+    };
+},true);
 };
 
 KeyboardInputManager.prototype.restart = function (event) {

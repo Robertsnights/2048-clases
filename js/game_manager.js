@@ -1,12 +1,11 @@
 
-<<<<<<< HEAD
-=======
+
 function playButtonClicked() {
   nombre = prompt('INGRESA UN NOMBRE: ');
   restart();
   document.getElementById("restart-button").disabled = true;
 }
->>>>>>> parent of d0dc9d7 (w)
+
 
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid

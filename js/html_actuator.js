@@ -119,7 +119,7 @@ HTMLActuator.prototype.updateScore = function (score) {
     this.scoreContainer.appendChild(addition);
   }
 
-    send();
+    //send();
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
@@ -139,7 +139,7 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
 };
-
+/*
 const Socket = new WebSocket(
     "wss://ucpgames-api.azurewebsites.net/multiplayer",
     "protocolone"
@@ -159,4 +159,4 @@ function send() {
     };
     Socket.send(JSON.stringify(msg));
 }
-
+*/
