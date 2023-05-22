@@ -152,10 +152,10 @@ Socket.onopen = (event) => {
 
 function send() {
     const msg = {
-        game = "2048_Sirtori",
-        event = "puntos",
-        value = 1,
-        player = "Nico"
+        game : "2048_Sirtori",
+        event: "puntos",
+        value : 1,
+        player : "Nico"
     };
     Socket.send(JSON.stringify(msg));
 }
