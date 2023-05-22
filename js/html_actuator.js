@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var nombre;
 
 function playButtonClicked() {
@@ -5,6 +6,8 @@ function playButtonClicked() {
   document.getElementById("descarga").disabled = true;
 }
 
+=======
+>>>>>>> parent of 8b7a718 (prueba)
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
@@ -163,29 +166,24 @@ function send() {
       "game" : "2048",
       "event" : "puntos",
       "value" : 1,
+<<<<<<< HEAD
       "player" : nombre,
+=======
+      "player" : "Nico"
+>>>>>>> parent of 8b7a718 (prueba)
   };
   Socket.send(JSON.stringify(msg));
 }
 
-Socket.onmessage = (event) => {
-  var listRank = '';
-  rankingGame = JSON.parse(event.data);
-  console.log(rankingGame);
 
-  var players= rankingGame.events[0].players;
+function recibir(){
+  msg2 = JSON.parse();
+  arr = msg2.JSON.parse.events.players;
+  arr.sort();
 
-  //players.sort();
-
-  for (let index = 0; index < players.length; index++) {
-      var p = players[index];
-      listRank+= '<li>' + p.name + ' puntos ('+ p.value +')</li>';
-  }
-
-  var puestos= document.getElementById("puestos");
-
-  puestos.innerHTML = listRank;
-
-
+  document.getElementById("cuatro") = arr[1];
+  document.getElementById("tres") = arr[2];
+  document.getElementById("dos") = arr[3];
+  document.getElementById("uno")= arr[4];
 };
 
