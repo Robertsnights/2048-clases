@@ -126,12 +126,16 @@ KeyboardInputManager.prototype.listen = function () {
     }
   });
   window.addEventListener("deviceorientation", function(event){
+    alfa=Math.round(event.alpha);
     beta=Math.round(event.beta);
     gama=Math.round(event.gamma);
+    var A=0;
     var x  = 0;
     var y=0;
+    var newA=alfa;
     var newX = gama;
     var newY = beta;
+
 
     if(newX < x){
         self.emit("move", 1);
@@ -151,6 +155,7 @@ KeyboardInputManager.prototype.listen = function () {
         self.emit("move",0);
         y=newY;
     };
+    
 },true);
 };
 
