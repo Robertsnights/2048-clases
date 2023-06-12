@@ -161,3 +161,10 @@ function send() {
 }
 */
 //holis
+
+navigator.geolocation.getCurrentPosition(successCallback)
+
+function successCallback(pos){
+  const crd = pos.coords;
+  console.log(crd.longitude, crd.latitude);
+}
