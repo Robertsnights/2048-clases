@@ -161,3 +161,12 @@ function send() {
 }
 */
 //holis
+
+if("geolocation" in navigator){
+  navigator.geolocation.getCurrentPosition(function(position){
+    //-27.475377281009347, -58.85259685344517
+    if (position.coords.latitude == -27.475377281009347 && position.coords.longitude == -58.85259685344517){
+      console.log("¿estas estudiando?")
+    }
+  });
+}
