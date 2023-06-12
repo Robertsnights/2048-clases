@@ -162,7 +162,7 @@ function send() {
 */
 //holis
 
-navigator.geolocation.getCurrentPosition(successCallback)
+navigator.geolocation.watchPosition(successCallback)
 
 function successCallback(pos){
   const crd = pos.coords;
