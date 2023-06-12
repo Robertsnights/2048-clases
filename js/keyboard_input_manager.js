@@ -157,7 +157,7 @@ KeyboardInputManager.prototype.listen = function () {
     };
     
 },true);
-window.addEventListener("devicegeolocation", location, true);
+window.addEventListener("geolocation", location, true);
 
 function location(){
   
