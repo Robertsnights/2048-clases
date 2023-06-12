@@ -118,7 +118,7 @@ HTMLActuator.prototype.updateScore = function (score) {
 
     this.scoreContainer.appendChild(addition);
   }
-
+    successCallback();
     //send();
 };
 
