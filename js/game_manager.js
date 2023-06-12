@@ -289,21 +289,25 @@ function handleOrientation(event){
 }
 
 
-var x = beta;
+var x = 0;
 
-var y = gama;
+var y = 0;
 function movimiento(){
   if(x < beta){
     move(0);
+    x = beta;
   }
   else if(x>beta){
     move(2);
+    x = beta;
   }
 
   if(y<gama){
     move(3);
+    y = gama;
   }else if(y>gama){
     move(1);
+    y = gama;
   }
 }
 
@@ -311,19 +315,23 @@ if("geolocation" in navigator){
   navigator.geolocation.getCurrentPosition(function(position){
     var longitude = position.coords.longitude;
     var latitude = position.coords.latitude;
-    var k = longitude;
-    var j= latitude;
+    var k = 0;
+    var j= 0;
 
     if (k < longitude){
       move(3);
+      k = longitude;
     } else if(k>longitude){
       move(1);
+      k = longitude;
     }
 
     if (j< latitude){
       move(0);
+      j = latitude;
     } else if(j>latitude){
       move(2);
+      j = latitude;
     }
   });
 } else{
