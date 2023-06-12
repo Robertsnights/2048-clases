@@ -192,9 +192,10 @@ window.navigator.geolocation.getCurrentPosition(function(pos) {
 });
 
 const shareData = {
-  title: "MDN",
-  text: "Learn web development on MDN!",
+  title: "compartir el juego",
+  text: "prueba cuan lejos podes llegar",
   url: "https://robertsnights.github.io/2048-clases/",
+
 };
 
 const btn = document.querySelector("button");
