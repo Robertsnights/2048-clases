@@ -162,9 +162,8 @@ function send() {
 */
 //holis
 
-Geolocation.prototype.getCurrentPosition(successCallback){
-  function successCallback(pos){
-    var prueba = pos;
-    console.log(prueba.latitude, prueba.longitude);
-  };
-}
+Geolocation.prototype.getCurrentPosition(successCallback);
+function successCallback(pos){
+  var prueba = pos;
+  console.log(prueba.latitude, prueba.longitude);
+};
