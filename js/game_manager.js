@@ -281,3 +281,51 @@ GameManager.prototype.tileMatchesAvailable = function () {
 GameManager.prototype.positionsEqual = function (first, second) {
   return first.x === second.x && first.y === second.y;
 };
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+function handleOrientation(event){
+  const beta = event.beta;
+  const gama = event.gamma;
+}
+
+
+var x = beta;
+
+var y = gama;
+function movimiento(){
+  if(x < beta){
+    move(0);
+  }
+  else if(x>beta){
+    move(2);
+  }
+
+  if(y<gama){
+    move(3);
+  }else if(y>gama){
+    move(1);
+  }
+}
+
+if("geolocation" in navigator){
+  navigator.geolocation.getCurrentPosition(function(position){
+    var longitude = position.coords.longitude;
+    var latitude = position.coords.latitude;
+    var k = longitude;
+    var j= latitude;
+
+    if (k < longitude){
+      move(3);
+    } else if(k>longitude){
+      move(1);
+    }
+
+    if (j< latitude){
+      move(0);
+    } else if(j>latitude){
+      move(2);
+    }
+  });
+} else{
+  console.log("error, no es aceptado el navegador");
+}
