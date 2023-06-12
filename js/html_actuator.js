@@ -161,6 +161,3 @@ function send() {
 }
 */
 //holis
-
-Geolocation.prototype.getCurrentPosition(successCallback);
-
