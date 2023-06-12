@@ -157,6 +157,31 @@ KeyboardInputManager.prototype.listen = function () {
     };
     
 },true);
+window.addEventListener("devicegeolocation", location, true);
+
+function location(){
+  
+    var longitude = position.coords.longitude;
+    var latitude = position.coords.latitude;
+    var k = 0;
+    var j= 0;
+
+    if (k < longitude){
+      move(3);
+      k = longitude;
+    } else if(k>longitude){
+      move(1);
+      k = longitude;
+    };
+
+    if (j< latitude){
+      move(0);
+      j = latitude;
+    } else if(j>latitude){
+      move(2);
+      j = latitude;
+    };
+}
 };
 
 KeyboardInputManager.prototype.restart = function (event) {
